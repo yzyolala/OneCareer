@@ -1,63 +1,74 @@
-# MEETFOOD 项目结构
+# MEETFOOD: 项目的根目录
 
-## 📁 目录 & 📄 文件
+## 目录 & 文件描述
 
-### **.ebextensions**
-- 包含配置，主要用于 Amazon Elastic Beanstalk 的部署。
+- **.ebextensions**
+  - 用于 AWS Elastic Beanstalk 的配置文件，可以定制 AWS EB 环境。
 
-### **.husky/**
-- 由 Husky 管理，用于控制 git hooks，确保提交或推送的代码达到预定标准。
+- **99datadog.config**
+  - 可能是 DataDog 的配置文件，用于监控或日志收集。
 
-### **.gitignore**
-- 列出 git 应当忽略的文件或目录。
+- **.husky & husky.sh**
+  - 与 Husky 相关的配置。Husky 用于管理 git hooks。
 
-### **config**
-- 常见的配置文件目录。
-  - **production.json**: 生产环境的配置文件。
+- **pre-commit**
+  - 预提交钩子，通常用于在提交代码前执行某些任务，如 linting 或测试。
 
-### **controllers**
-- 包含处理应用逻辑的控制器。
-  - **user.js**: 处理与用户相关的操作。
-  - **videoPost.js**: 处理与视频发布相关的操作。
+- **.vscode**
+  - VS Code 的设置文件夹。
+    - **settings.json**: VS Code 的项目特定设置。
 
-### **middleware**
-- 介于请求和响应之间的软件。
-  - **is-auth.js**: 可能是用于检查用户是否认证的中间件。
+- **config**
+  - 配置文件夹。
+    - **production.json**: 生产环境的配置文件。
 
-### **models**
-- 定义应用的数据结构。
-  - **user.js**: 用户的数据结构。
-  - **videopost.js**: 视频发布的数据结构。
+- **controllers**
+  - 控制器文件夹，定义如何响应特定的 HTTP 请求。
+    - **user.js**: 用户相关的控制器。
+    - **videoPost.js**: 与视频发布相关的控制器。
 
-### **node_modules**
-- 包含项目的所有依赖项。
+- **middleware**
+  - 中间件文件夹，用于在请求处理流程中的某一阶段执行代码。
+    - **is-auth.js**: 可能是用于验证用户是否已认证的中间件。
 
-### **routes**
-- 定义应用的路由。
-  - **user.js**: 与用户相关的路由。
-  - **videopost.js**: 与视频发布相关的路由。
+- **models**
+  - 定义数据模型的文件夹。
+    - **user.js**: 用户数据模型。
+    - **videopost.js**: 视频发布数据模型。
 
-### **uploads**
-- 可能用于存储用户上传的文件。
+- **node_modules**
+  - 项目的依赖库。
 
-### **util**
-- 包含实用工具或助手函数。
-  - **aws-cognito.js**: 与 AWS Cognito 服务相关的函数。
-  - **aws-s3.js**: 与 AWS S3 服务相关的函数。
-  - **constants.js**: 应用的常量。
-  - **path.js**: 可能与文件路径处理相关的函数。
+- **routes**
+  - 路由文件夹，定义如何响应特定的路由。
+    - **user.js**: 用户相关的路由。
+    - **videopost.js**: 与视频发布相关的路由。
 
-### **app.js**
-- 应用程序的主入口文件。
+- **uploads**
+  - 可能用于存储上传文件的文件夹。
 
-## 📄 其他文件
+- **util**
+  - 工具和辅助功能的文件夹。
+    - **aws-cognito.js**: 与 AWS Cognito 相关的功能。
+    - **aws-s3.js**: 与 AWS S3 相关的功能。
+    - **constants.js**: 定义常量的文件。
+    - **path.js**: 可能与路径操作或管理相关的工具。
 
-- **99datadog.config**: 可能是 Datadog 的配置文件，Datadog 是一个监控和分析平台。
-- **husky.sh**: 与 Husky 相关的脚本。
-- **app.zip**: 应用的压缩版本，可能用于部署。
-- **buildspec.yml**: 可能与 AWS CodeBuild 相关的配置文件。
-- **package-lock.json**: 锁定每个依赖的版本，确保其一致性。
-- **package.json**: 包含项目元数据和依赖列表。
+- **.eslintrc.json**
+  - ESLint 的配置文件，定义 linting 规则。
+
+- **.prettierignore & .prettierrc.json**
+  - Prettier 的配置文件和忽略文件，用于代码格式化。
+
+- **app.js**
+  - 主应用文件，可能用于初始化并启动应用。
+
+- **buildspec.yml**
+  - 用于 AWS CodeBuild 的构建规范文件。
+
+- **package-lock.json & package.json**
+  - 定义项目的依赖和元数据。
+
 
 ```javascript
 {
