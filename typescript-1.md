@@ -160,7 +160,7 @@ Dog.bark(); // 调用狗的叫声方法
 
 
 ## 前端代码实例
-```typescripte
+```typescript
 // 引入 react-native 库中的组件
 import { Text, SafeAreaView, View,StyleSheet,Button } from 'react-native';
 
