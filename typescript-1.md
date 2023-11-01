@@ -216,5 +216,122 @@ const styles = StyleSheet.create({
 在 JSX 中插入了变量的值。
 为 Button 组件设置了点击事件处理函数。
 
+## Typescript函数大小括号区别
+
+1. 使用 `{}`
+
+当你需要多行逻辑或多个语句时，你使用大括号 `{}`。在这种情况下，你需要使用 `return` 语句来返回值。
+
+```javascript
+const add = (a, b) => {
+  const result = a + b;
+  return result;
+};
+```
+
+2. 使用 `()`
+
+当你想直接返回一个表达式的结果时，你可以使用圆括号 `()`。这种方法是为了确保返回的是整个表达式的值，而不是仅仅是第一行。这在返回对象或 JSX 元素时特别有用。
+
+```javascript
+const Rectangle = () => (
+  <View style={styles.rectangle}>
+    <Text>My rectangle</Text>
+  </View>
+);
+```
+# 简单的rn例子
+
+```typescript
+// 导入expo的状态栏
+import { StatusBar } from 'expo-status-bar';
+// 从react-native中导入所需组件
+import { StyleSheet, Text, View, SafeAreaView, ScrollView, TextInput } from 'react-native';
+// 从react中导入函数组件(FC)和useState钩子
+import { FC, useState } from 'react';
+
+// 定义一个颜色数组
+const colorArray = ['blue', 'green', 'yellow', 'purple', 'grey', 'pink', 'red', 'orange'];
+
+// 定义矩形列表的属性接口
+interface RectangleListProps {
+  quantity: number
+}
+
+// 定义矩形列表组件
+const RectangleList: FC<RectangleListProps> = ({ quantity }) => {
+    // 初始化一个空字符串数组
+    const arr: string[] = [];
+    // 循环填充随机颜色，直到达到所需数量
+    while (arr.length < quantity) {
+        const randomIndex = Math.floor(Math.random() * colorArray.length);
+        arr.push(colorArray[randomIndex]);
+    }
+    // 返回一个映射的矩形组件列表
+    return (
+        <>
+            {
+                arr.map((colorValue, index) => (
+                    <Rectangle color={colorValue} key={index} />
+                ))
+            }
+        </>
+    )
+};
+
+// 定义矩形的属性接口
+interface RectangleProps {
+    color: string;
+}
+
+// 定义矩形组件
+const Rectangle: FC<RectangleProps> = ({ color }) => (
+    <View style={{ height: 60, width: '100%', backgroundColor: color }}>
+        <Text>Rectangle</Text>
+    </View>
+);
+
+// 定义默认应用组件
+export default function App() {
+    // 初始化矩形数量的状态
+    const [numOfRectangles, setNumOfrectangles] = useState('0');
+    return (
+        <SafeAreaView style={{ flex: 1 }}>
+            <Text>Enter a number of rectangle</Text>
+            // 用户输入矩形数量的输入框
+            <TextInput style={styles.input} value={numOfRectangles} onChangeText={setNumOfrectangles} />
+            // 显示矩形的滚动视图
+            <ScrollView style={styles.container} contentContainerStyle={styles.listContentContainer}>
+                <RectangleList quantity={Number(numOfRectangles)} />
+                <StatusBar style="auto" />
+            </ScrollView>
+        </SafeAreaView>
+    );
+}
+
+// 定义组件样式
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+    },
+    input: {
+        borderWidth: 2,
+        padding: 6
+    },
+    listContentContainer: {
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+    },
+    rectangle: {
+        backgroundColor: 'red',
+        height: 60,
+        width: '100%',
+    }
+});
+
+```
+
+上述代码主要是一个简单的React Native应用，用户可以输入需要的矩形数量，然后应用会显示相应数量的随机颜色的矩形。
 
 
