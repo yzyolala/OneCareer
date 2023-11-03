@@ -81,3 +81,35 @@ export default function Layout() { // 导出默认的函数组件Layout
 }
 
 ```
+
+## 这个_layout文件是干嘛的
+
+这个_layout.tsx文件定义了一个名为Layout的组件，该组件主要用于设置和展示应用的底部标签导航（Tab Navigation）。让我们详细解析它的内容：
+
+导入的模块:
+
+Tabs 来自 expo-router：这是用来创建标签导航器的组件。
+
+Text, View 来自 react-native：这是React Native的基本UI组件。
+
+FontAwesome 来自 @expo/vector-icons：这是用来展示FontAwesome图标的组件。
+
+Layout组件的功能:
+
+定义了一个标签导航器<Tabs>。
+
+在这个导航器中，有四个<Tabs.Screen>组件，每个组件代表一个标签页面。
+
+标签页面的描述:
+
+video/[id]：代表一个动态路由，可能用于显示特定ID的视频内容。
+
+index：这是首页标签，显示了"HOME"的文本，并有一个代表家的图标。
+
+createContent：这是创建内容的标签。它的标签按钮被自定义为一个加号图标，用于提示用户创建或添加新内容。
+
+userProfile：这是用户个人资料的标签。它显示了"me"的文本，并有一个代表用户的图标。
+
+每个<Tabs.Screen>组件都有其特定的options属性，该属性定义了如何显示标签、标签的标题、图标等。
+
+总结：_layout.tsx文件定义了应用的主要标签导航界面，让用户可以轻松地在不同的页面之间切换。
