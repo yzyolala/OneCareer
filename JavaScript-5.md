@@ -1,20 +1,24 @@
 ## AWS:
 
-| 层级（Service Layer） | 服务类型（Type of Service） | 示例（Examples） |
-|---------------------|----------------------------|-----------------|
-| 基础设施（IaaS）      | 虚拟服务器                  | Amazon EC2      |
-|                     | 块级存储                    | Amazon EBS      |
-|                     | 网络设施                    | Amazon VPC      |
-|---------------------|----------------------------|-----------------|
-| 平台（PaaS）         | 应用部署和管理平台            | AWS Elastic Beanstalk |
-|                     | 认证服务和访问管理            | AWS IAM        |
-|                     | 无服务器计算                | AWS Lambda     |
-|                     | 消息队列服务                | AWS SQS        |
-|                     | 数据库服务                  | Amazon RDS     |
-|---------------------|----------------------------|-----------------|
-| 应用软件（SaaS）     | 邮件服务                    | Amazon WorkMail |
-|                     | 代码托管和协作服务          | AWS CodeCommit |
-|                     | 虚拟桌面服务                | Amazon WorkSpaces |
+| 层级（Service Layer） | 服务类型（Type of Service） | 示例（Examples）               |
+|---------------------|----------------------------|-----------------------------|
+| 基础设施（IaaS）      | 虚拟服务器                  | Amazon EC2, Google Compute Engine (GCE), Microsoft Azure, Rackspace, Digital Ocean, Linode |
+|                     | 块级存储                    | Amazon EBS (part of EC2 service) |
+|                     | 网络设施                    | Amazon VPC, Azure Virtual Network |
+|---------------------|----------------------------|-----------------------------|
+| 平台（PaaS）         | 应用部署和管理平台            | AWS Elastic Beanstalk, Heroku, Google App Engine, Microsoft Azure |
+|                     | 认证服务和访问管理            | AWS IAM, Azure Active Directory |
+|                     | 无服务器计算                | AWS Lambda, Google Cloud Functions, Azure Functions |
+|                     | 消息队列服务                | AWS SQS, Google Cloud Pub/Sub, Azure Queue Storage |
+|                     | 数据库服务                  | Amazon RDS, Google Cloud SQL, Azure SQL Database |
+|---------------------|----------------------------|-----------------------------|
+| 应用软件（SaaS）     | 邮件服务                    | Amazon WorkMail, Gmail, Outlook |
+|                     | 代码托管和协作服务          | AWS CodeCommit, GitHub, GitLab |
+|                     | 虚拟桌面服务                | Amazon WorkSpaces, Microsoft Office 365 |
+|                     | 机器学习服务                | AWS Rekognition, Google AI Platform |
+|                     | 文件存储和协作              | Dropbox, Google Drive |
+|                     | 会议和通讯                  | Zoom, Microsoft Teams |
+
 
 
 
