@@ -1,20 +1,21 @@
 ## AWS:
 
-| 层级（Service Layer）  | 服务类型（Type of Service）  | 示例（Examples）                   |
-|----------------------|------------------------------|-----------------------------------|
-| 基础设施（IaaS）       | 虚拟或实体计算机              | 虚拟机，物理服务器                |
-|                      | 块级存储                     | 磁盘存储，对象存储               |
-|                      | 网络设施                     | 负载均衡，内容交付网络，DNS解析   |
-|----------------------|------------------------------|-----------------------------------|
-| 平台（PaaS）          | 对象存储                     | Amazon S3, Google Cloud Storage   |
-|                      | 认证服务和访问服务           | OAuth, IAM                       |
-|                      | 程序的运行时                 | Java Runtime, Python Runtime      |
-|                      | 队列服务                     | AWS SQS, RabbitMQ                |
-|                      | 数据库服务                   | MySQL, PostgreSQL                 |
-|----------------------|------------------------------|-----------------------------------|
-| 应用软件（SaaS）      | 邮件服务                     | Gmail, Outlook                   |
-|                      | 代码托管服务                 | GitHub, GitLab                   |
-|                      | 其他                         | CRM系统，文档编辑器等            |
+| 层级（Service Layer） | 服务类型（Type of Service） | 示例（Examples） |
+|---------------------|----------------------------|-----------------|
+| 基础设施（IaaS）      | 虚拟服务器                  | Amazon EC2      |
+|                     | 块级存储                    | Amazon EBS      |
+|                     | 网络设施                    | Amazon VPC      |
+|---------------------|----------------------------|-----------------|
+| 平台（PaaS）         | 应用部署和管理平台            | AWS Elastic Beanstalk |
+|                     | 认证服务和访问管理            | AWS IAM        |
+|                     | 无服务器计算                | AWS Lambda     |
+|                     | 消息队列服务                | AWS SQS        |
+|                     | 数据库服务                  | Amazon RDS     |
+|---------------------|----------------------------|-----------------|
+| 应用软件（SaaS）     | 邮件服务                    | Amazon WorkMail |
+|                     | 代码托管和协作服务          | AWS CodeCommit |
+|                     | 虚拟桌面服务                | Amazon WorkSpaces |
+
 
 
 **IaaS（基础设施即服务）**: 例如，Amazon EC2（Elastic Compute Cloud）提供了虚拟机的计算能力，Amazon S3（Simple Storage Service）提供了存储服务，而 VPC（Virtual Private Cloud）提供了网络基础设施。
