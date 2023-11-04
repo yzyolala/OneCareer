@@ -22,13 +22,21 @@
 
 
 
-**IaaS（基础设施即服务）**: 例如，Amazon EC2（Elastic Compute Cloud）提供了虚拟机的计算能力，Amazon S3（Simple Storage Service）提供了存储服务，而 VPC（Virtual Private Cloud）提供了网络基础设施。
+云计算的类型
 
-**PaaS（平台即服务）**: AWS 也提供像 AWS Elastic Beanstalk 这样的PaaS服务，它允许开发人员集中精力在应用代码上，而不用担心底层的基础设施，包括服务器的运行和维护。
+- 基础设施即服务（IaaS）
+  - 为云计算提供构建模块
+  - 提供网络、计算机、数据存储空间
+  - 最高水平的灵活性
+  - 与传统的本地 IT 有易于理解的对应关系
 
-**SaaS（软件即服务）**: AWS还提供了一些SaaS解决方案，例如Amazon WorkSpaces（一个虚拟桌面服务）或Amazon Chime（用于视频和音频会议）。
+- 平台即服务（PaaS）
+  - 免除了组织管理底层基础设施的需要
+  - 专注于应用程序的部署和管理
 
-AWS 是一个综合性的云服务提供商，它提供从底层基础设施到上层应用软件的全方位服务。不同的AWS服务可能属于这个分类中的不同层级
+- 软件即服务（SaaS）
+  - 由服务提供商运行和管理的完整产品
+
 
 ## Amazon EC2（Elastic Compute Cloud)
 
