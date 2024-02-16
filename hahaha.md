@@ -13,7 +13,7 @@
 | Certification if any:                          | AWS Certified Cloud Practitioner/Google Technical Support Fundamentals |
 | Relocation Nationwide (Yes/ No):               | Prefer Texas but open to other locations    |
 | Nationality:                                   | China                                       |
-| Visa Status:                                   | opt first(will apply for greencard next month by getting married with US Citizen) |
+| Visa Status:                                   | opt first year(will apply for greencard next month by getting married with US Citizen) |
 | Any Database (Any Name):                       | no                                          |
 
 
